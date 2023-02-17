@@ -51,7 +51,7 @@ function searchGender(e) {
   const cards = loadCharacters(filteredSearch);
   cardContainer.innerHTML = cards;
 
-  const percentage = dataJs.caululatePercentage(characters.length, filteredSearch.length);
+  const percentage = dataJs.calculatePercentage(characters.length, filteredSearch.length);
   percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
 
   
@@ -64,7 +64,7 @@ function searchStatus(e) {
   const cards = loadCharacters(filteredSearch);
   cardContainer.innerHTML = cards;
 
-  const percentage = dataJs.caululatePercentage(characters.length, filteredSearch.length);
+  const percentage = dataJs.calculatePercentage(characters.length, filteredSearch.length);
   percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
 
 }
