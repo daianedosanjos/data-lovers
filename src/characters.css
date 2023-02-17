@@ -80,11 +80,10 @@ body{
 .div-percentage{
 	color: white;
 	display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 	margin-top: 1.5rem;
 	font-size: 1.5rem;
 	font-weight: bold;
-	
 }
 
