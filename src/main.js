@@ -1,8 +1,6 @@
 import dataJs from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
 
-
-
 const characters = data.results;
 const searchFor = document.getElementById("input-search");
 const cardContainer = document.getElementById("card-container");
@@ -10,7 +8,6 @@ const gender = document.getElementById("gender");
 const status = document.getElementById("status");
 const order = document.getElementById("order");
 const percentageReturn = document.getElementById('percentage-return');
-
 
 function loadCharacters(itens) {
   const arrayResults = itens.map((item) => {
@@ -36,7 +33,7 @@ cardContainer.innerHTML = loadCharacters(characters);
 searchFor.addEventListener("keyup", searchName);
 gender.addEventListener("change", searchGender);
 status.addEventListener("change", searchStatus);
-// só faz uma de cada vez, para filtrar todas, colocar o filtro clicável e executar todas as funções dentro dele alinhadas com if e else
+// só faz uma de cada vez. Para filtrar todas, colocar o filtro clicável e executar todas as funções dentro dele alinhadas com if e else
 
 function searchName(e) {
   const value = e.target.value; // target é uma referência ao objeto que enviou o evento. Por exemplo, quando você quer capturar o que foi digitado em um campo input de um form , você utiliza o event. target. value , ou seja, você irá capturar do input do form o valor que foi digitado
@@ -52,11 +49,8 @@ function searchGender(e) {
   cardContainer.innerHTML = cards;
 
   const percentage = dataJs.calculatePercentage(characters.length, filteredSearch.length);
-  percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
-
-  
+  percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`; 
 }
-
 
 function searchStatus(e) {
   const value = e.target.value;
@@ -66,9 +60,7 @@ function searchStatus(e) {
 
   const percentage = dataJs.calculatePercentage(characters.length, filteredSearch.length);
   percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
-
 }
-
 
 order.addEventListener("change", orderAlphabetica);
 

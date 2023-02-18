@@ -3,6 +3,7 @@
 	font-family: 'IBM Plex Mono', monospace;
 	margin: 1rem;
   padding: 1rem;
+
 }
 
 .btn{
@@ -16,10 +17,6 @@
   color: aqua;
   font-weight: bold;
   
-}
-
-.quiz{
-	/* margin: auto; */
 }
 
 .quizQuestion{

@@ -1,39 +1,21 @@
-*{
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
-} 
-
-.input{
-	display: flex;
-	border-radius: 10px;   
-	align-items: center;
-	justify-content: center;
-    
-}
-
-.input-search, select{
-	border-radius:5px;
-}
-
-body{
-	background-image: url(./images/ceu12.avif);	
-	background-size: cover;
-	height: 100vh;
-}
-
+/* config especifica dessa pagina */
 .main{
-	
-	background-position: center;
-	background-size: cover;
-	width: 95%;
-	margin: auto;	
-	margin-top:5px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem 0rem 0rem 0rem;
-	gap: 10px;
+	margin: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+}
+/* filtros de pesquisas */
+.input-search, select{
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 375){
+	.main{
+		display: flex;
+		
+		/* flex-direction: column; colocar os filtros divididos em duas colunas
+	*/
+	}
 }
 
 .card-container {
@@ -42,7 +24,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	overflow-y: scroll;
-	/* scrollbar-color não pega no chrome */
+	/*scrollbar-color não pega no chrome */
 	height: 37rem;
 }
 
@@ -86,4 +68,3 @@ body{
 	font-size: 1.5rem;
 	font-weight: bold;
 }
-
