@@ -41,10 +41,7 @@ const dataJs = {
   calculatePercentage: function(dataList, dataListFiltered) {    
     return parseInt((dataListFiltered*100)/dataList)
   }
-  
-
-
-  
+    
 };  
 
 export default dataJs;

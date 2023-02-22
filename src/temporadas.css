@@ -2,35 +2,44 @@
 .main{
 	padding: 0px;
   }
-  /*  */
-  .temporada{
-	  display: flex;
-	  text-decoration: none;
-	  justify-content: space-around;
-	  gap: 2.5rem;
-	  align-items: center;
-	  margin-top: 2.5rem;
-	  text-align: center;
-	  border: 2px solid #3ADFAD;
-	  border-radius: 5px;
-	  padding: 1rem;
-  }
-  
-  .titleTemp{
-	  color: #3ADFAD;
-	  text-transform: uppercase;
-	  text-decoration: underline;
-	  text-align: center;
-	  margin: auto;
-	  font-family: 'IBM Plex Mono'; 
-  }
-  
-  .containerTemporada{
-	  width: 35%;
-  }
-  
-  .temporadaDescription{
-	  color: #3ADFAD;
-	  font-weight: 500;
-	  font-size: large;
-  }
+	
+/* onde ficam os vídeos e sinopses  */
+.temporada{
+	display: flex;
+	text-decoration: none;
+	justify-content: space-around;
+	gap: 2.5rem;
+	align-items: center;
+	margin-top: 2.5rem;
+	text-align: center;
+	border: 2px solid #3ADFAD;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+.titleTemp{
+	color: #3ADFAD;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-align: center;
+	margin: auto;
+	font-family: 'IBM Plex Mono'; 
+}
+
+.containerTemporada{
+	width: 35%;
+}
+
+.temporadaDescription{
+	color: #3ADFAD;
+	font-weight: 500;
+	font-size: large;
+}
+
+@media screen and (max-width: 820px) {
+	.temporada{
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	
+}
