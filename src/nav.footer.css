@@ -19,17 +19,17 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background: linear-gradient(90deg, #07c972, #359d9e);
+	background: linear-gradient(98deg, #07c972, #359d9e, #07c972);
 	height: 10vh;
   }
   
  
-  .nav-list {
+  .navList {
 	list-style: none;
 	display: flex;
   }
   
-  .nav-list .itemNav {
+  .nav-list li {
 	letter-spacing: 3px;
 	margin-left: 32px;
   }
@@ -49,7 +49,7 @@
 
   
 
-#listNav, .itemNav a{
+.itemNav a{
 	display: flex;
 	  justify-content: space-around;
 	  list-style-type: none;
@@ -63,12 +63,7 @@
   
   }
   
-  #listNav{
-	  /* nova inserção */
-	margin: 1rem 2rem;
-	  padding: 0rem;
-  
-  }
+
   #listNav a:hover, footer a:hover, .jogos:hover{
 	  /* color:aqua; */
 	  font-size: larger;
@@ -112,7 +107,7 @@ footer a{
 	.nav-list {
 	  position: absolute;
 	  top: 8vh;
-	  right: -30px;
+	  right: 0;
 	  width: 50vw;
 	  height: 92vh;
 	  background: linear-gradient(90deg, #07c972, #359d9e);
@@ -123,7 +118,7 @@ footer a{
 	  transition: transform 0.3s ease-in;
 	  z-index: 9;
 	}
-	.nav-list .itemNav {
+	.nav-list li {
 	  margin-left: 0;
 	  opacity: 0;
 	}
