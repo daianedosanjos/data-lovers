@@ -9,12 +9,26 @@
 	border-radius: 5px;
 }
 
-@media screen and (max-width: 375){
+@media screen and (max-width: 768px){
 	.main{
 		display: flex;
-		
-		/* flex-direction: column; colocar os filtros divididos em duas colunas
-	*/
+		flex-direction: column; 		/* colocar os filtros divididos em duas colunas */
+		flex-wrap: wrap;
+		margin: 0px;
+	}
+	.logo{
+		margin: -10px;
+	}
+	.div-percentage{
+		margin: 0px;
+		text-align: center;
+	
+	}
+	.listNav{
+		/* colocar no background */
+		gap: 1rem;
+    margin: 0px;
+    padding: 0.5rem
 	}
 }
 

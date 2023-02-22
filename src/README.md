@@ -18,8 +18,8 @@
 
 ## 1. Protótipos
 Inicialmente, pensamos em criar uma página de navegação simples e fácil, bem intuitiva e com cores que remetessem a série. Para criação do protótipo de média fidelidade utilizamos o Figma(figma.com)
-![protótipo](prototipo%20figma.PNG)
-![protótipo](prototipo%20figma%20pag2.jpeg)
+![protótipo](./images/prototipo%20figma.PNG)
+![protótipo](./images/prototipo%20figma%20pag2.jpeg)
 
 ## 2. Resumo do projeto
 
@@ -111,11 +111,11 @@ resolver o problema (ou problemas) de seu usuário.
 
 ### Histórias de usuário
 
-<img src="historia de usuario.PNG">
-<img src="historia de usuario2.PNG">
-<img src="historia de usuario3.PNG">
-<img src="historia de usuario4.PNG">
-<img src="historia de usuario5.PNG">
+![protótipo](./images/historia%20de%20usuario.PNG)
+![protótipo](./images/historia%20de%20usuario2.PNG)
+![protótipo](./images/historia%20de%20usuario3.PNG)
+![protótipo](./images/historia%20de%20usuario4.PNG)
+![protótipo](./images/historia%20de%20usuario5.PNG)
 
 #### Testes de usabilidade
 
