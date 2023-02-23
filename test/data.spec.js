@@ -1,87 +1,59 @@
-import {alphabeticalOrder, searchByName} from '../src/data.js';
+import {alphabeticalOrder, searchByName, filter} from '../src/data.js';
 
 const rick = {
-  "id": "1",
   "name": "Rick Sanchez",
   "status": "Alive",
   "species": "Human",
-  "type": "",
-  "gender": "Male",
-  "origin": {
-    "name": "Earth (C-137)",
-    "url": "https://rickandmortyapi.com/api/location/1"
-  },
+  "gender": "Male", 
 }
 
-const morty = {
-  "id": "2",
-  "name": "Morty Smith",
-  "status": "Alive",
-  "species": "Human",
-  "type": "",
-  "gender": "Male",
-  "origin": {
-    "name": "Earth (C-137)",
-    "url": "https://rickandmortyapi.com/api/location/1"
-  },
+const chris = {
+  "name": "Chris",
+  "status": "Dead",
+  "species": "Alien",
+  "gender": "unknown",
 }
 
-const summer = {
-  "id": "3",
-  "name": "Summer Smith",
+const fleeb = {
+  "name": "Fleeb",
+  "status": "unknown",
+  "species": "Alien",
+  "gender": "unknown",
+}
+
+const jackie = {
+  "name": "Jackie",
   "status": "Alive",
-  "species": "Human",
-  "type": "",
+  "species": "Alien",
   "gender": "Female",
-  "origin": {
-    "name": "Earth (Replacement Dimension)",
-    "url": "https://rickandmortyapi.com/api/location/20"
-  },
 }
 
-const beth = {
-  "id": "4",
-  "name": "Beth Smith",
-  "status": "Alive",
-  "species": "Human",
-  "type": "",
-  "gender": "Female",
-  "origin": {
-    "name": "Earth (Replacement Dimension)",
-    "url": "https://rickandmortyapi.com/api/location/20"
-  },
+const beebo = {
+  "name": "Beebo",
+  "status": "Dead",
+  "species": "Alien",
+  "gender": "Male", 
+ 
 }
 
-const jerry = {
-  "id": "5",
-  "name": "Jerry Smith",
-  "status": "Alive",
-  "species": "Human",
-  "type": "",
-  "gender": "Male",
-  "origin": {
-    "name": "Earth (Replacement Dimension)",
-    "url": "https://rickandmortyapi.com/api/location/20"
-  },
-}
-
-const arrayTest = [rick, morty, summer, beth, jerry ]
+const arrayTest = [rick, chris, fleeb, jackie, beebo ]
 
 describe ('ordenar lista personagens', () => {
-  test('is a function', () => {
-    expect(typeof alphabeticalOrder).toBe('function');
+  it('is a function', () => {
+    expect(typeof alphabeticalOrder).toBe('function');//toBe(valor) testa se o valor passado é idêntico ao esperado em valor e tipo
   })
 
   it('ordenar de a-z', () =>{
     const valueAz = "a-z"
 
-    expect(alphabeticalOrder(valueAz, arrayTest)).toEqual([arrayTest[3], arrayTest[4], arrayTest[1], arrayTest[0], arrayTest[2]])
+    expect(alphabeticalOrder(valueAz, arrayTest)).toEqual([arrayTest[4], arrayTest[1], arrayTest[2], arrayTest[3], arrayTest[0]])
   })
+  //A função . toEqual(valor) testa recursivamente cada valor do objeto ou array.
 
   it('ordenar de z-a', () =>{
     const valueZa = "z-a"
 
-    expect(alphabeticalOrder(valueZa, arrayTest)).toEqual([arrayTest[2], arrayTest[0], arrayTest[1], arrayTest[4], arrayTest[3]])
+    expect(alphabeticalOrder(valueZa, arrayTest)).toEqual([arrayTest[0], arrayTest[3], arrayTest[2], arrayTest[1], arrayTest[4]])
   })
 })
 
@@ -90,7 +62,24 @@ describe('filtrar por nome', () => {
     expect(typeof searchByName).toBe('function')
   });
 
-  it('returns character by searched name', () => {
+  it('retornar', () => {
     expect(searchByName(arrayTest, "rick")).toEqual([arrayTest[0]]);
+  })
+});
+
+describe('buscar por status', () => {
+  it('is a function', () => {
+    expect(typeof filter).toBe('function')
+  });
+
+  it('retornar personagem por status filtrado', () => {
+    const especie1 = "Alive"
+    const especie2 = "Dead"
+    const especie3 = "unknown"
+
+
+    expect(filter(especie1, arrayTest)).toEqual([arrayTest[3]]);
+    expect(filter(especie2, arrayTest)).toEqual([arrayTest[2]]);
+    expect(filter(especie3, arrayTest)).toEqual([arrayTest[3]]);
   })
 });
