@@ -3,6 +3,7 @@ body{
 	font-family: 'IBM Plex Mono', monospace;
 	/* height: auto; */
 	/* width: auto; */
+	background-size: 100%;
  
 }
 
@@ -16,7 +17,7 @@ body{
 	
 }
 
-.main, .filters{
+.main{
 	width: 95%;
 	margin: 1rem 2rem;	
 	align-items: center;
@@ -26,12 +27,15 @@ body{
 .main, .filters{
 	width: 95%;
 	margin: auto;	
-	margin-top:5px;
+	/* margin-top:5px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem 0rem 0rem 0rem;
 	gap: 10px;
+}
+.filters{
+	padding: 0%;
 }
 
 .nav-bar{
