@@ -1,11 +1,13 @@
 body{
 	background-image: url(./images/background.jpg);
 	font-family: 'IBM Plex Mono', monospace;
-	height: auto;
-	width: auto;
-	background-size: 100%;
- /* opacity: 90%; no bcg? */
+	/* height: auto; */
+	/* width: auto; */
  
+}
+
+.mobile-menu{
+	display: none;
 }
 
 .img-header{
@@ -95,7 +97,7 @@ footer a{
 }
 
 /* menu hamburguer do responsivo */
-@media screen and (max-width: 720px) {
+/* @media screen and (max-width: 720px) {
 .mobile-menu {
 	display: none;
 	cursor: pointer;
@@ -108,10 +110,10 @@ footer a{
 	margin: 8px;
 	transition: 0.3s;
   }
-}
+} */
 
-@media (max-width: 600px) {
-	/* refazer, coloquei a class nav-list pelo id nav-list */
+/* @media (max-width: 600px) { 
+	 refazer, coloquei a class nav-list pelo id nav-list 
 	body {
 	  overflow-x: hidden;
 	}
@@ -151,7 +153,7 @@ footer a{
 	}
 }
 
-/* daqui pra baixo não deveria ficar dentro do @media? */
+ daqui pra baixo não deveria ficar dentro do @media? 
 	.mobile-menu.active .line1 {
 		transform: rotate(-45deg) translate(-8px, 8px);
 		}
@@ -163,4 +165,4 @@ footer a{
 		.mobile-menu.active .line3 {
 		transform: rotate(45deg) translate(-5px, -7px);
 		}
-
+ */

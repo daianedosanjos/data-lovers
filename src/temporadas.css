@@ -26,8 +26,12 @@
 	font-family: 'IBM Plex Mono'; 
 }
 
+.traillers{
+	width: 100%;
+}
+
 .containerTemporada{
-	width: 35%;
+	width: 100%;
 }
 
 .temporadaDescription{
@@ -36,10 +40,14 @@
 	font-size: large;
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (min-width: 481px) and (max-width: 820px) {
 	.temporada{
 		flex-direction: column;
 		flex-wrap: wrap;
+	}
+	
+	iframe{
+		width: 100%;
 	}
 	
 }
