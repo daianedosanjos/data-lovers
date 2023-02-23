@@ -28,11 +28,11 @@ function loadCharacters(itens) {
   return arrayResults.join(""); //O método join() junta todos os elementos de um array (ou um array-like object) em uma string e retorna esta string
 }
 
-cardContainer.innerHTML = loadCharacters(characters);
+// cardContainer.innerHTML = loadCharacters(characters);
 
-searchFor.addEventListener("keyup", searchName);
-gender.addEventListener("change", searchGender);
-status.addEventListener("change", searchStatus);
+// searchFor.addEventListener("keyup", searchName);
+// gender.addEventListener("change", searchGender);
+// status.addEventListener("change", searchStatus);
 // só faz uma de cada vez. Para filtrar todas, colocar o filtro clicável e executar todas as funções dentro dele alinhadas com if e else
 
 function searchName(e) {
@@ -62,7 +62,7 @@ function searchStatus(e) {
   percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
 }
 
-order.addEventListener("change", orderAlphabetica);
+// order.addEventListener("change", orderAlphabetica);
 
 function orderAlphabetica(e) {
   const charactersOrder = order.value;

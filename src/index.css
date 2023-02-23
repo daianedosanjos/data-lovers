@@ -1,3 +1,8 @@
+/* body especifico para essa pág */
+body{
+	margin: 0px;
+}
+
 .textApresentation{
 	color: rgb(0, 0, 0);
 	line-height: 30px;
@@ -18,4 +23,23 @@
 	align-items:center;
 	margin: 3rem;
 	gap: 1rem;	
+}
+
+@media screen and (min-width: 481px) and (max-width:768px) {
+	.mainSobre{
+		display: block;
+		text-align: center;
+	}
+	.containerImagem{
+		width: 10%;
+	}
+	.imagemLateral{
+		width: 55%;
+		margin-top: -24%;
+	}
+
+	.cards{
+		width: 100% ;
+		margin: auto;
+	}
 }
