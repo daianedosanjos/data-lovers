@@ -1,5 +1,5 @@
 /* config especifica dessa pagina */
-.main{
+.filters{
 	margin: 2rem;
   	margin-top: 1.5rem;
  	 padding-top: 1.2rem;
@@ -8,8 +8,6 @@
 .input-search, select{
 	border-radius: 5px;
 }
-
-
 
 .card-container {
 	display: flex;
@@ -64,7 +62,7 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px){
-	.main{
+	.filters{
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;

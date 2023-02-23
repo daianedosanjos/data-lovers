@@ -40,6 +40,10 @@
 	font-size: large;
 }
 
+iframe{
+	width: 150%;
+}
+
 @media screen and (min-width: 481px) and (max-width: 820px) {
 	.temporada{
 		flex-direction: column;
