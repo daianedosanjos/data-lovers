@@ -1,7 +1,5 @@
-import dataJs from "./data.js";
+import {searchByName, filter, alphabeticalOrder, calculatePercentage} from "./data.js";
 import data from "./data/rickandmorty/rickandmorty.js";
-
-
 
 const characters = data.results;
 const searchFor = document.getElementById("input-search");
@@ -10,7 +8,6 @@ const gender = document.getElementById("gender");
 const status = document.getElementById("status");
 const order = document.getElementById("order");
 const percentageReturn = document.getElementById('percentage-return');
-
 
 function loadCharacters(itens) {
   const arrayResults = itens.map((item) => {
@@ -30,60 +27,42 @@ function loadCharacters(itens) {
   });
   return arrayResults.join(""); //O método join() junta todos os elementos de um array (ou um array-like object) em uma string e retorna esta string
 }
-
 cardContainer.innerHTML = loadCharacters(characters);
 
-searchFor.addEventListener("keyup", searchName);
-gender.addEventListener("change", searchGender);
-status.addEventListener("change", searchStatus);
-// só faz uma de cada vez, para filtrar todas, colocar o filtro clicável e executar todas as funções dentro dele alinhadas com if e else
 
-function searchName(e) {
+searchFor.addEventListener("keyup", (e) => {
   const value = e.target.value; // target é uma referência ao objeto que enviou o evento. Por exemplo, quando você quer capturar o que foi digitado em um campo input de um form , você utiliza o event. target. value , ou seja, você irá capturar do input do form o valor que foi digitado
-  const filteredSearch = dataJs.searchByName(characters, value);
+  const filteredSearch = searchByName(characters, value);
   const cards = loadCharacters(filteredSearch);
   cardContainer.innerHTML = cards;
-}
+})
 
-function searchGender(e) {
+gender.addEventListener("change", (e) => {
   const value = e.target.value;
-  const filteredSearch = dataJs.searchByGender(characters, value);
+  const filteredSearch = filter(characters, value, "gender");
   const cards = loadCharacters(filteredSearch);
   cardContainer.innerHTML = cards;
 
-  const percentage = dataJs.caululatePercentage(characters.length, filteredSearch.length);
-  percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
+  const percentage = calculatePercentage(characters.length, filteredSearch.length);
+  percentageReturn.innerHTML = `Essa lista contém ${filteredSearch.length} personagens, que equivale á ${percentage}% dos personagens totais`; 
+})
 
-  
-}
-
-
-function searchStatus(e) {
+status.addEventListener("change", (e) => {
   const value = e.target.value;
-  const filteredSearch = dataJs.searchByStatus(characters, value);
+  const filteredSearch = filter(characters, value, "status");
   const cards = loadCharacters(filteredSearch);
   cardContainer.innerHTML = cards;
 
-  const percentage = dataJs.caululatePercentage(characters.length, filteredSearch.length);
-  percentageReturn.innerHTML = `Essa lista contém ${percentage}% dos personagens totais`;
+  const percentage = calculatePercentage(characters.length, filteredSearch.length);
+  percentageReturn.innerHTML = `Essa lista contém ${filteredSearch.length} personagens, que equivale á ${percentage}% dos personagens totais`;
+})
 
-}
-
-
-order.addEventListener("change", orderAlphabetica);
-
-function orderAlphabetica(e) {
+order.addEventListener("change", () => {
   const charactersOrder = order.value;
-  if (charactersOrder === "az") {
-    const option = e.target.value;
-    const filterOrder = dataJs.alphabeticalOrder(characters, option);
-    const cards = loadCharacters(filterOrder);
-    cardContainer.innerHTML = cards;
-  } 
-  else if (charactersOrder === "za") {
-    const option = e.target.value;
-    const filterOrder = dataJs.alphabeticalOrder(characters, option).reverse();
-    const cards = loadCharacters(filterOrder);
-    cardContainer.innerHTML = cards;
-  }
-}
+  const filterOrder = alphabeticalOrder(charactersOrder,characters );
+  const cards = loadCharacters(filterOrder);
+  cardContainer.innerHTML = cards;  
+
+  const percentage = calculatePercentage(characters.length, filterOrder.length);
+  percentageReturn.innerHTML = `Essa lista contém ${filterOrder.length} personagens, que equivale á ${percentage}% dos personagens totais`;
+})

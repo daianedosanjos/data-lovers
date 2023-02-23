@@ -7,39 +7,43 @@
   <script defer src="main.js" type="module"></script>
   <title>Conheça os personagens</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <link rel="stylesheet" href="nav.footer.css">
+  <link rel="stylesheet" href="backgroundFooterNav.css">
   <link rel="stylesheet" href="characters.css"> 
   <script defer src="./mobile-navbar.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-		<nav>
-		    <a class="logo" href="/">Rick and Morty</a>
-		  <div class="mobile-menu">
-			<div class="line1"></div>
-			<div class="line2"></div>
-			<div class="line3"></div>
-		  </div>
-		  <ul class="nav-list" id="listNav">
-			<li class="itemNav"><a href="./index.html">Sobre</a></li>
-			<li class="itemNav"><a href="./characters.html">Personagens</a></li>
-			<li class="itemNav"><a href="./temporadas.html">Temporadas</a></li>
-			<li class="itemNav jogos">Jogos
-				<a class="invisible" href="quiz.html">Quiz: quão fã você é?</a>
-        		<a class="invisible" href="game.html">Jogo da Memória</a>
-			
-			</li>
-			<li class="itemNav"><a href="./sobre.html">Sobre nós</a></li>
-		  </ul>
-		</nav>
-	  </header>
+  <nav class="nav-bar">
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+
+    <ul class="listNav">
+      <li class="itemNav"><a href="./index.html">Sobre</a></li>
+      <li class="itemNav"><a href="./characters.html">Personagens</a></li>
+      <li class="itemNav"><a href="./temporadas.html">Temporadas</a></li>
+      <li class="itemNav jogos">Jogos
+        <a class="invisible" href="quiz.html">Quiz: quão fã você é?</a>
+        <a class="invisible" href="game.html">Jogo da Memória</a>
+      </li>
+      <li class="itemNav"><a href="./sobre.html">Sobre nós</a></li>
+    </ul>
+  </nav>
+  
+  <header class="img-header">
+    <a class="logo" href="/"><img src="./images/Rick-And-Morty-Logo.png" width="350px" alt="">
+    </a>
+  </header>
+
   <main class="main">
     <section id="input" class="input">
       <label >
-        <input type="text" id="input-search" class="input-search" placeholder="Pesquise o nome da nome">
+        <input type="text" id="input-search" class="input-search" placeholder="Pesquise por nome">
       </label>
     </section>
 
@@ -59,26 +63,20 @@
  
     <select name="order" id="order">
       <option selected="true" disabled="disabled">Ordem alfabética</option>
-      <option value="az">A - Z</option>
-      <option value="za">Z - A</option>
+      <option value="a-z">A - Z</option>
+      <option value="z-a">Z - A</option>
     </select>
-
-
-   
-
-
   </main>
 
   <div class="div-percentage" id="div-percentage">      
     <p class="percentage-return" id="percentage-return"></p>      
-</div>
+  </div>
   
   <div class="card-container" id="card-container"></div>
  
   <footer>
 		<h4>Desenvolvido por <a href="https://github.com/daianedosanjos?tab=repositories" target="_blank">Daiane dos
-		Anjos</a> e <a href="https://github.com/Geice-Sousa?tab=repositories" target="_blank">Geice Sousa
-		Pinho</a>, 2023 &copy;</h4>
+		Anjos</a> e <a href="https://github.com/Geice-Sousa?tab=repositories" target="_blank">Geice Sousa Pinho</a>, 2023 &copy;</h4>
 	</footer>
 </body>
 </html>
