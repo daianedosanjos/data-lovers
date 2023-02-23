@@ -9,28 +9,7 @@
 	border-radius: 5px;
 }
 
-@media screen and (max-width: 768px){
-	.main{
-		display: flex;
-		flex-direction: column; 		/* colocar os filtros divididos em duas colunas */
-		flex-wrap: wrap;
-		margin: 0px;
-	}
-	.logo{
-		margin: -10px;
-	}
-	.div-percentage{
-		margin: 0px;
-		text-align: center;
-	
-	}
-	.listNav{
-		/* colocar no background */
-		gap: 1rem;
-    margin: 0px;
-    padding: 0.5rem
-	}
-}
+
 
 .card-container {
 	display: flex;
@@ -81,4 +60,28 @@
 	margin-top: 1.5rem;
 	font-size: 1.5rem;
 	font-weight: bold;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+	.main{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: auto;
+		margin-top: -2rem;
+		padding-top: 1rem;
+	}
+	.logo{
+		margin: -10px;
+	}
+	.div-percentage{
+		margin: 0px;
+		text-align: center;
+	
+	}
+	.listNav{
+		/* colocar no background */
+		gap: 1rem;
+  
+	}
 }
