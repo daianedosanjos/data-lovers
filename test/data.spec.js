@@ -84,7 +84,7 @@ describe("filtrar por key", () => {
   });
 });
 
-describe("ordenar lista personagens", () => {
+describe("ordem alfabética", () => {
   it("is a function", () => {
     expect(typeof alphabeticalOrder).toBe("function"); //toBe(valor) testa se o valor passado é idêntico ao esperado em valor e tipo
   });
@@ -113,39 +113,6 @@ describe("ordenar lista personagens", () => {
       arrayTest[4],
     ]);
   });
-});
-
-describe("filtrar por nome", () => {
-  it("is a function", () => {
-    expect(typeof searchByName).toBe("function");
-  });
-
-  it("retornar", () => {
-    expect(searchByName(arrayTest, "rick")).toEqual([arrayTest[0]]);
-  });
-});
-
-it("ordenar de a-z", () => {
-  const valueAz = "a-z";
-  expect(alphabeticalOrder(valueAz, arrayTest)).toEqual([
-    arrayTest[4],
-    arrayTest[1],
-    arrayTest[2],
-    arrayTest[3],
-    arrayTest[0],
-  ]);
-});
-//A função .toEqual(valor) testa recursivamente cada valor do objeto ou array.
-
-it("ordenar de z-a", () => {
-  const valueZa = "z-a";
-  expect(alphabeticalOrder(valueZa, arrayTest)).toEqual([
-    arrayTest[0],
-    arrayTest[3],
-    arrayTest[2],
-    arrayTest[1],
-    arrayTest[4],
-  ]);
 });
 
 describe("filtrar por nome", () => {
