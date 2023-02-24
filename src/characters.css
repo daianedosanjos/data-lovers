@@ -1,9 +1,14 @@
 /* config especifica dessa pagina */
 .filters{
 	margin: 2rem;
+<<<<<<< HEAD
   margin-top: 1.5rem;
+=======
+  	margin-top: 1.5rem;
+ 	 padding-top: 1.2rem;
+>>>>>>> a65f028f54016af0749101c70188f8736c7513d3
 }
-/* filtros de pesquisas */
+
 .input-search, select{
 	border-radius: 5px;
 }
@@ -52,10 +57,11 @@
 .div-percentage{
 	color: white;
 	display: flex;
-  justify-content: center;
-  align-items: center;
+  	justify-content: center;
+  	align-items: center;
+	
 	margin-top: 1.5rem;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 }
 
@@ -74,6 +80,7 @@
 	.div-percentage{
 		margin: 0px;
 		text-align: center;
+		justify-content: center;
 	
 	}
 	.listNav{

@@ -1,4 +1,4 @@
-const grid = document.getElementById('grid');
+const grid = document.getElementById('grid-game');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 

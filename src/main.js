@@ -63,6 +63,6 @@ order.addEventListener("change", () => {
   const cards = loadCharacters(filterOrder);
   cardContainer.innerHTML = cards;  
 
-  const percentage = calculatePercentage(characters.length, filterOrder.length);
-  percentageReturn.innerHTML = `Essa lista contém ${filterOrder.length} personagens, que equivale á ${percentage}% dos personagens totais`;
+ 
+  percentageReturn.innerHTML = `No total são ${filterOrder.length} personagens`;
 })
