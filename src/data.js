@@ -9,8 +9,8 @@ export const searchByName =  (characters, name) => {
   
 export const filter = (characters, value, key) => {
   const filterData = characters.filter(function(character) {
-    const filteredSearch = character[key].toLowerCase() === value;
-    return filteredSearch;
+    const filterSearch = character[key].toLowerCase() === value;
+    return filterSearch;
   });
   return filterData;
 }  
