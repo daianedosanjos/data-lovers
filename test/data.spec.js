@@ -1,4 +1,4 @@
-import {alphabeticalOrder, searchByName} from '../src/data.js';
+import {alphabeticalOrder, searchByName, filter} from '../src/data.js';
 
 const rick = {
   "id": "1",
@@ -14,16 +14,11 @@ const rick = {
 }
 
 const morty = {
-  "id": "2",
   "name": "Morty Smith",
   "status": "Alive",
   "species": "Human",
   "type": "",
-  "gender": "Male",
-  "origin": {
-    "name": "Earth (C-137)",
-    "url": "https://rickandmortyapi.com/api/location/1"
-  },
+  "gender": "Male",  
 }
 
 const summer = {
@@ -46,10 +41,7 @@ const beth = {
   "species": "Human",
   "type": "",
   "gender": "Female",
-  "origin": {
-    "name": "Earth (Replacement Dimension)",
-    "url": "https://rickandmortyapi.com/api/location/20"
-  },
+ 
 }
 
 const jerry = {
@@ -59,13 +51,11 @@ const jerry = {
   "species": "Human",
   "type": "",
   "gender": "Male",
-  "origin": {
-    "name": "Earth (Replacement Dimension)",
-    "url": "https://rickandmortyapi.com/api/location/20"
-  },
+ 
 }
 
 const arrayTest = [rick, morty, summer, beth, jerry ]
+
 
 describe ('ordenar lista personagens', () => {
   test('is a function', () => {
@@ -94,3 +84,6 @@ describe('filtrar por nome', () => {
     expect(searchByName(arrayTest, "rick")).toEqual([arrayTest[0]]);
   })
 });
+
+
+
