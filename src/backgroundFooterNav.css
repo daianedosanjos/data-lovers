@@ -140,10 +140,10 @@ footer a{
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100vw;
+		width: 95vw;
 		height: 100vh;
 		background-color: rgb(255, 255, 255);
-		opacity: 90%;
+		opacity: 95%;
 		/* display: flex;
 		align-items: center;
 		justify-content: center; */
@@ -160,6 +160,7 @@ footer a{
 
 	.menu-section.on .menu-burguer .one{
 		transform: rotate(45deg) translate(7px, 7px);
+		background-color: #551A8B;
 	}
 
 	.menu-section.on .menu-burguer .two{
@@ -168,6 +169,7 @@ footer a{
 
 	.menu-section.on .menu-burguer .three{
 		transform: rotate(-45deg) translate(8px, -9px);
+		background-color: #551A8B;
 	}
 
 	.menu-section.on nav ul{
@@ -181,13 +183,8 @@ footer a{
 		transition-duration: 0.35s;
 		line-height: 5rem;
 		font-size: 1.5rem;
-		margin-left: 0;
-		
-		
+		margin-left: 0;		
 	}
-	
-	  
-
 	
 
 }
