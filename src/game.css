@@ -7,7 +7,7 @@ body{
 
 main{
   justify-content: center;
-  margin: 0rem 4rem;
+  margin: 0rem 1.5rem;
 }
 h1{
   color: #3adfad;
@@ -27,7 +27,7 @@ img{
   width: 4rem;
 }
 
-.grid {
+.grid-game {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: .5rem;
