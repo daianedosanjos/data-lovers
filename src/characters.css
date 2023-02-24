@@ -1,8 +1,7 @@
 /* config especifica dessa pagina */
 .filters{
 	margin: 2rem;
-  	margin-top: 1.5rem;
- 	 padding-top: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 .input-search, select{
@@ -53,9 +52,8 @@
 .div-percentage{
 	color: white;
 	display: flex;
-  	justify-content: center;
-  	align-items: center;
-	
+  justify-content: center;
+  align-items: center;
 	margin-top: 1.5rem;
 	font-size: 1.4rem;
 	font-weight: bold;
@@ -80,8 +78,10 @@
 	
 	}
 	.listNav{
-		/* colocar no background */
 		gap: 1rem;
   
+	}
+	footer{
+		font-size: .8rem;
 	}
 }

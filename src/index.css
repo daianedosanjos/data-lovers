@@ -43,3 +43,22 @@ body{
 		margin: auto;
 	}
 }
+
+@media screen and (min-width: 320px) and (max-width:480px){
+	.mainSobre{
+		display: block;
+		text-align: center;
+		margin: 2rem;
+		padding-right: 25px;
+	}
+
+	.imagemLateral{
+		width: 100%;
+		margin-top: -40%;
+	}
+
+	.cards{
+		width: 110% ;
+		margin: auto;
+	}
+}

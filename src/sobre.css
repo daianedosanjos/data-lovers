@@ -9,10 +9,13 @@ h1{
 ul{
 	padding-right: 20px;
 	list-style: none;
+<<<<<<< HEAD
+=======
 }
 
 li{
 	list-style: none;
+>>>>>>> a65f028f54016af0749101c70188f8736c7513d3
 }
 
 .cardContainer{
