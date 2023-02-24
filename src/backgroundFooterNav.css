@@ -62,7 +62,8 @@ body{
 }
 .jogos:hover a.invisible, a.invisible{
 	display: block;
-	font-size: x-small;
+	font-size: medium;
+	
 
 }
 

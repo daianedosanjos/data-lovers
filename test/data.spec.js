@@ -1,9 +1,4 @@
-import {
-  filter,
-  alphabeticalOrder,
-  searchByName,
-  calculatePercentage,
-} from "../src/data.js";
+import {filter, alphabeticalOrder, searchByName, calculatePercentage} from "../src/data.js";
 
 const rick = {
   name: "Rick Sanchez",
@@ -32,7 +27,6 @@ const jackie = {
   species: "Alien",
   gender: "Female",
 };
-
 const beebo = {
   name: "Beebo",
   status: "Dead",
@@ -84,14 +78,13 @@ describe("filtrar por key", () => {
   });
 });
 
-describe("ordem alfabética", () => {
+describe("ordenar lista personagens", () => {
   it("is a function", () => {
     expect(typeof alphabeticalOrder).toBe("function"); //toBe(valor) testa se o valor passado é idêntico ao esperado em valor e tipo
   });
 
   it("ordenar de a-z", () => {
     const valueAz = "a-z";
-
     expect(alphabeticalOrder(valueAz, arrayTest)).toEqual([
       arrayTest[4],
       arrayTest[1],
@@ -100,11 +93,10 @@ describe("ordem alfabética", () => {
       arrayTest[0],
     ]);
   });
-  //A função . toEqual(valor) testa recursivamente cada valor do objeto ou array.
+  //A função .toEqual(valor) testa recursivamente cada valor do objeto ou array.
 
   it("ordenar de z-a", () => {
     const valueZa = "z-a";
-
     expect(alphabeticalOrder(valueZa, arrayTest)).toEqual([
       arrayTest[0],
       arrayTest[3],
