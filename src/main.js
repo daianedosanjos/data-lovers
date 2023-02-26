@@ -6,6 +6,7 @@ const searchFor = document.getElementById("input-search");
 const cardContainer = document.getElementById("card-container");
 const gender = document.getElementById("gender");
 const status = document.getElementById("status");
+const specie = document.getElementById("specie");
 const order = document.getElementById("order");
 const percentageReturn = document.getElementById('percentage-return');
 
@@ -57,12 +58,21 @@ status.addEventListener("change", (e) => {
   percentageReturn.innerHTML = `Essa lista contém ${filteredSearch.length} personagens, que equivale á ${percentage}% dos personagens totais`;
 })
 
+specie.addEventListener("change", (e) => {
+  const value = e.target.value;
+  const filteredSearch = filter(characters, value, "species");
+  const cards = loadCharacters(filteredSearch);
+  cardContainer.innerHTML = cards;
+
+  const percentage = calculatePercentage(characters.length, filteredSearch.length);
+  percentageReturn.innerHTML = `Essa lista contém ${filteredSearch.length} personagens, que equivale á ${percentage}% dos personagens totais`;
+})
+
 order.addEventListener("change", () => {
   const charactersOrder = order.value;
-  const filterOrder = alphabeticalOrder(charactersOrder,characters );
+  const filterOrder = alphabeticalOrder(charactersOrder, characters );
   const cards = loadCharacters(filterOrder);
   cardContainer.innerHTML = cards;  
 
- 
-  percentageReturn.innerHTML = `No total são ${filterOrder.length} personagens`;
 })
+
