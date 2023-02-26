@@ -1,0 +1,40 @@
+h2{
+	text-align: center;
+	margin: 0% 2% 5% 2%;
+}
+
+.mainQuiz{
+	color: #3ADFAD;
+	font-family: 'IBM Plex Mono', monospace;
+	margin: 1rem;
+  padding: 1rem;
+	margin: auto;
+
+}
+
+.quiz{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 2rem;
+	/* margin: auto; */
+	/* text-align: center; */
+}
+
+.quizQuestion{
+	display: inline-block;
+	text-align: left;
+  /* border: 2px solid #3ADFAD; */
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.divQuiz{
+	border-radius: 10px;
+	border: 2px solid rgba(128, 0, 128, 0.466);
+	width: 30%;
+}
+
+.quizRespostas{
+ margin-left: 2rem;
+}

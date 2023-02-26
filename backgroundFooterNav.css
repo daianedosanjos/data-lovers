@@ -1,0 +1,181 @@
+body{
+	background-image: url(./images/background.jpg);
+	font-family: 'IBM Plex Mono', monospace;
+	/* height: auto; */
+	/* width: auto; */
+	background-size: 100%;
+ 
+}
+
+.img-header{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.filters{
+	width: 95%;
+	margin: 1rem 2rem;	
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;	/* tem que ter para não expandir os inputs  */
+	/* padding: 2rem 0rem 0rem 0rem; */
+	gap: 10px;
+}
+
+
+.nav-bar{
+	background-color: rgb(255, 255, 255);
+	color: #551A8B;
+	padding: .1rem;
+	font-size: larger;
+	opacity: 70%;
+}
+
+.listNav, .itemNav a{
+  display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: 'IBM Plex Mono', monospace; 
+	align-items: center;
+	opacity: 100%;
+
+}
+
+.listNav{
+  margin: 1rem 2rem;
+	padding: 0rem;
+
+}
+.listNav a:hover, footer a:hover, .jogos:hover{
+	font-size: larger;
+ 	cursor: pointer; 
+}
+
+.jogos a.invisible{
+	display: none;
+
+}
+.jogos:hover a.invisible, a.invisible{
+	display: block;
+	font-size: medium;
+	
+
+}
+
+footer{
+	font-family: 'IBM Plex Mono', monospace; 
+	text-align: center;
+	/* igual ao nav - aqui parece mais escuro */
+	background-color: rgb(255, 255, 255);
+	padding: .5px;
+	font-size: larger;
+	opacity: 60%;
+	margin-top: .5rem; /*quebra entre os cards e o footer*/
+
+}
+footer h5{
+	margin: .8rem;
+	opacity: 100%;
+}
+footer a{
+	color: #551A8B;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+@media(max-width: 560px){
+	.logo{
+		margin: -10px;
+	}
+	.div-percentage{
+		margin: 0px;
+		text-align: center;
+	
+	}
+
+	.filters{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: auto;
+		margin-top: -2rem;
+		padding-top: 1rem;
+	}
+	
+	nav{
+		display: none;
+		color: #551A8B;
+	}
+
+	.one,
+	.two,
+	.three{
+		background-color: #3ADFAD;
+		height: 5px;
+		width: 100%;
+		margin: 6px auto;
+		margin-left: 80%;		
+		transition-duration: 0.3s;
+	}
+
+	.menu-burguer{
+		margin-top: 2rem;
+		width: 40px;
+		height: 30px;
+	
+	}
+
+	.menu-section.on{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 95vw;
+		height: 100vh;
+		background-color: rgb(255, 255, 255);
+		opacity: 90%;
+		z-index: 9;
+	}
+
+	.menu-section.on nav{
+		display: block;
+	}
+
+	.menu-section.on .menu-burguer{
+		top: 15px;
+	}
+
+	.menu-section.on .menu-burguer .one{
+		transform: rotate(45deg) translate(7px, 7px);
+		background-color: #551A8B;
+	}
+
+	.menu-section.on .menu-burguer .two{
+		opacity: 0;
+	}
+
+	.menu-section.on .menu-burguer .three{
+		transform: rotate(-45deg) translate(8px, -9px);
+		background-color: #551A8B;
+	}
+
+	.menu-section.on nav ul{
+		display: block;
+		text-align: center;
+	}
+
+	.menu-section.on nav ul li a,
+	.jogos
+	{
+		transition-duration: 0.35s;
+		line-height: 5rem;
+		font-size: 1.5rem;
+
+		margin-left: 0;
+				
+	}
+}
