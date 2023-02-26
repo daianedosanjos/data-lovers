@@ -9,6 +9,7 @@ const status = document.getElementById("status");
 const specie = document.getElementById("specie");
 const order = document.getElementById("order");
 const percentageReturn = document.getElementById('percentage-return');
+const cleanfilter = document.getElementById("reset")
 
 function loadCharacters(itens) {
   const arrayResults = itens.map((item) => {
@@ -76,3 +77,7 @@ order.addEventListener("change", () => {
 
 })
 
+
+cleanfilter.addEventListener('click', (event) => {
+  location.reload(event);
+})
