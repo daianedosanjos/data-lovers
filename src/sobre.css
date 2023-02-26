@@ -1,4 +1,6 @@
-
+body{
+	height: 100%;
+}
 h1{
 	margin: auto;
 	margin-top: 1rem;
@@ -10,17 +12,23 @@ ul{
 	padding-right: 20px;
 	list-style: none;
 }
+.logo{
+	margin-top: 1rem;
+  }
 
 .cardContainer{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	margin: 1rem;
 
 }
+li{
+	font-size: 1.1rem;
+}
 
 .cardItem{
-	padding: 1rem;
 	background-color: #3ADFAD;
 	border-radius: 15px;
 	display: flex;
@@ -34,11 +42,44 @@ ul{
 
 }
 
-.card-img, a {
-	text-align: center;
-	width: 90%;
+.card-img {
+	text-align: center;	
 	border-radius: 50%;
 	margin-top: 2px;
 	margin: auto;
-
 }
+
+.footer-sobre{
+	position: fixed;
+}
+
+@media screen and (min-width: 438px) and (max-width: 524px) {
+	.cardItem{
+		width: 200px;
+		margin: auto;
+	}
+
+	li{
+		font-size: 1rem;
+	}
+	
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 437px) {
+	.cardItem{
+		width: 180px;
+		margin: auto;
+	}
+	li{
+		font-size: 0.8rem;
+	}
+	
+  }
+
+ @media screen and (max-width: 523px)
+ {
+  footer{
+    position: absolute;
+
+  }
+ }
