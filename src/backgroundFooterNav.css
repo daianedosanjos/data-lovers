@@ -1,10 +1,7 @@
 body{
 	background-image: url(./images/background.jpg);
 	font-family: 'IBM Plex Mono', monospace;
-	/* height: auto; */
-	/* width: auto; */
 	background-size: 100%;
- 
 }
 
 .img-header{
@@ -20,10 +17,8 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;	/* tem que ter para não expandir os inputs  */
-	/* padding: 2rem 0rem 0rem 0rem; */
 	gap: 10px;
 }
-
 
 .nav-bar{
 	background-color: rgb(255, 255, 255);
@@ -43,9 +38,7 @@ body{
 	font-family: 'IBM Plex Mono', monospace; 
 	align-items: center;
 	opacity: 100%;
-
 }
-
 .listNav{
   margin: 1rem 2rem;
 	padding: 0rem;
@@ -58,13 +51,10 @@ body{
 
 .jogos a.invisible{
 	display: none;
-
 }
 .jogos:hover a.invisible, a.invisible{
 	display: block;
 	font-size: medium;
-	
-
 }
 
 footer{
@@ -76,7 +66,6 @@ footer{
 	font-size: larger;
 	opacity: 60%;
 	margin-top: .5rem; /*quebra entre os cards e o footer*/
-
 }
 footer h5{
 	margin: .8rem;
@@ -174,8 +163,23 @@ footer a{
 		transition-duration: 0.35s;
 		line-height: 5rem;
 		font-size: 1.5rem;
-
 		margin-left: 0;
 				
+	}
+}
+
+@media screen and (min-width: 60px) and (max-width: 360px)  {
+	html{
+		width: 100vw;
+	}
+	
+	footer{
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 200px) {
+	html{
+		width: 100vw;
 	}
 }
