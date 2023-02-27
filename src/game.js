@@ -3,17 +3,16 @@ const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
 // const characters = [
-//   {"imagem": "../images/beth.jpg"},
-//   {"imagem": "../images/jerry.jpg"},
-//   {"imagem": "../images/jessica.jpg"},
-//   {"imagem": "../images/morty.jpg"},
-//   {"imagem": "../images/pessoa-passaro.jpg"},
-//   {"imagem": "../images/pickle-rick.jpg"},
-//   {"imagem": "../images/rick.jpg"},
-//   {"imagem": "../images/summer.jpg"},
-//   {"imagem": "../images/scroopy.jpg"},
-// ];
-
+//   "../images/beth.jpg",
+//   "../images/jerry.jpg",
+//   "../images/jessica.jpg",
+//   "../images/morty.jpg",
+//   "../images/pessoa-passaro.jpg",
+//   "../images/pickle-rick.jpg",
+//   "../images/rick.jpg",
+//   "../images/summer.jpg",
+//  "../images/scroopy.jpg"
+// ]
 const characters = [
   'beth.svg',
   'jerry.png',
@@ -94,10 +93,10 @@ const createCard = (character) => {
   const card = createElement('div', 'card');
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
-  
-  front.style.transform = ` rotateY(${character * 180}deg ) `;
 
-  front.style.backgroundImage = `url('../images/${character}')`;
+  // front.style.transform = ` rotateY(${character * 180}deg ) `;
+
+  front.style.backgroundImage = `url('./images/${character}')`;
 
 
 
