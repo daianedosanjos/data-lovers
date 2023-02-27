@@ -79,13 +79,13 @@ img{
   transition: all 700ms ease;
 }
 
-/* .front {
+.front {
  -webkit-transform: rotateY(180deg);
  -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
-} */
+}
 
 .back {
   background-image: url("./images/rick\ e\ morty6.jpg");
