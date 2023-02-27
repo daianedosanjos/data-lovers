@@ -96,7 +96,7 @@ const createCard = (character) => {
 
   // front.style.transform = ` rotateY(${character * 180}deg ) `;
 
-  front.style.backgroundImage = `url('./images/${character}')`;
+  front.style.backgroundImage = `url('images/${character}')`;
 
 
 
