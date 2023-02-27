@@ -3,18 +3,17 @@ const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
 const characters = [
-  'beth',
-  'jerry',
-  'jessica',
-  'morty',
-  'pessoa-passaro',
-  'pickle-rick',
-  'rick',
-  'summer',
-  'meeseeks',
-  'scroopy',
+  'beth.png',
+  'jerry.png',
+  'jessica.png',
+  'morty.png',
+  'pessoa-passaro.png',
+  'pickle-rick.png',
+  'rick.png',
+  'summer.png',
+  'meeseeks.png',
+  'scroopy.png',
 ];
-
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
   element.className = className;
@@ -41,6 +40,8 @@ const checkCards = () => {
 
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');
+    const audio = new Audio("audio/click.mp3");
+    audio.play();
 
     firstCard = '';
     secondCard = '';
@@ -77,12 +78,11 @@ const revealCard = ({ target }) => {
 }
 
 const createCard = (character) => {
-
   const card = createElement('div', 'card');
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
 
-  front.style.backgroundImage = `url('../images/${character}.png')`;
+  front.style.backgroundImage = `url('images/${character}')`;
 
   card.appendChild(front);
   card.appendChild(back);
