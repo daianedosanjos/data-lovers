@@ -1,13 +1,13 @@
 body{
 	background-image: url(./images/background.jpg);
 	font-family: 'IBM Plex Mono', monospace;
-	background-size: 100%; 
+	/* background-size: 100%; não precisa, a imagem se adequa e depois repeat */
 }
 
 .img-header{
 	display: flex;
 	justify-content: center;
-	
+	margin: 2.5rem;
 }
 
 .filters{
@@ -66,17 +66,19 @@ body{
 	padding: .5px;
 	font-size: larger;
 	opacity: 60%;
-	margin-top: .5rem; /*quebra entre os cards e o footer*/
 	bottom: 0;
 	left: 0;
-	height: 5rem;
+	/* height: 5rem; deixa o footer muito largo */
 	justify-content: center;
 	align-items: center;
-	margin: auto;
+	margin: .5rem auto auto auto; /*.5rem quebra entre os cards e o footer*/
+	background-color: rgb(255, 255, 255);
+
 
 }
 .footer h4{
 	opacity: 100%;
+	margin: 1rem;
 }
 .footer a{
 	color: #551A8B;
@@ -85,6 +87,9 @@ body{
 }
 
 @media(max-width: 590px){
+	.img-header{
+		margin: 1.2rem;
+	}
 	.logo{
 		margin: -10px;
 	}

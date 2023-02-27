@@ -31,7 +31,6 @@ function loadCharacters(itens) {
 }
 cardContainer.innerHTML = loadCharacters(characters);
 
-
 searchFor.addEventListener("keyup", (e) => {
   const value = e.target.value; // target é uma referência ao objeto que enviou o evento. Por exemplo, quando você quer capturar o que foi digitado em um campo input de um form , você utiliza o event. target. value , ou seja, você irá capturar do input do form o valor que foi digitado
   const filteredSearch = searchByName(characters, value);

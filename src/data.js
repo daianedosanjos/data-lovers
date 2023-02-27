@@ -1,4 +1,3 @@
-
 export const searchByName =  (characters, name) => {
   const filterName = characters.filter(function(character) {
     const filteredSearch = character.name.toLowerCase().includes(name);//***toLowerCase() O método toLowerCase() retorna o valor da string que foi chamada convertido para minúsculo
@@ -36,7 +35,6 @@ export const alphabeticalOrder = (value, characters) => {
   }
   return filterOrder
 }
-
 
 export const calculatePercentage = (dataList, dataListFiltered)=> {    
   return parseInt((dataListFiltered*100)/dataList)
