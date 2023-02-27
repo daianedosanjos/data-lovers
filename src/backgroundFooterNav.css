@@ -1,7 +1,7 @@
 body{
 	background-image: url(./images/background.jpg);
 	font-family: 'IBM Plex Mono', monospace;
-	background-size: 100%;
+	background-size: 100%; 
 }
 
 .img-header{
@@ -38,6 +38,8 @@ body{
 	font-family: 'IBM Plex Mono', monospace; 
 	align-items: center;
 	opacity: 100%;
+	color: #551A8B;
+
 }
 .listNav{
   margin: 1rem 2rem;
@@ -57,27 +59,32 @@ body{
 	font-size: medium;
 }
 
-footer{
+.footer{
 	font-family: 'IBM Plex Mono', monospace; 
 	text-align: center;
-	/* igual ao nav - aqui parece mais escuro */
 	background-color: rgb(255, 255, 255);
 	padding: .5px;
 	font-size: larger;
 	opacity: 60%;
 	margin-top: .5rem; /*quebra entre os cards e o footer*/
+	bottom: 0;
+	left: 0;
+	height: 5rem;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+
 }
-footer h5{
-	margin: .8rem;
+.footer h4{
 	opacity: 100%;
 }
-footer a{
+.footer a{
 	color: #551A8B;
 	text-decoration: none;
 	font-weight: 600;
 }
 
-@media(max-width: 560px){
+@media(max-width: 590px){
 	.logo{
 		margin: -10px;
 	}
@@ -96,7 +103,7 @@ footer a{
 		padding-top: 1rem;
 	}
 	
-	nav{
+	.nav-bar{
 		display: none;
 		color: #551A8B;
 	}
@@ -166,20 +173,5 @@ footer a{
 		margin-left: 0;
 				
 	}
-}
-
-@media screen and (min-width: 60px) and (max-width: 360px)  {
-	html{
-		width: 100vw;
-	}
 	
-	footer{
-		width: 100%;
-	}
-}
-
-@media screen and (min-width: 200px) {
-	html{
-		width: 100vw;
-	}
 }
