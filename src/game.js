@@ -2,19 +2,8 @@ const grid = document.getElementById('grid-game');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
-// const characters = [
-//   "../images/beth.jpg",
-//   "../images/jerry.jpg",
-//   "../images/jessica.jpg",
-//   "../images/morty.jpg",
-//   "../images/pessoa-passaro.jpg",
-//   "../images/pickle-rick.jpg",
-//   "../images/rick.jpg",
-//   "../images/summer.jpg",
-//  "../images/scroopy.jpg"
-// ]
 const characters = [
-  'beth.svg',
+  'beth.png',
   'jerry.png',
   'jessica.png',
   'morty.png',
@@ -89,16 +78,11 @@ const revealCard = ({ target }) => {
 }
 
 const createCard = (character) => {
-
   const card = createElement('div', 'card');
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
 
-  // front.style.transform = ` rotateY(${character * 180}deg ) `;
-
   front.style.backgroundImage = `url('images/${character}')`;
-
-
 
   card.appendChild(front);
   card.appendChild(back);
