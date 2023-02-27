@@ -94,8 +94,12 @@ const createCard = (character) => {
   const card = createElement('div', 'card');
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
+  
+  front.style.transform = ` rotateY(${character * 180}deg ) `;
 
   front.style.backgroundImage = `url('../images/${character}')`;
+
+
 
   card.appendChild(front);
   card.appendChild(back);
