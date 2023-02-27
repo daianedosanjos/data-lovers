@@ -2,19 +2,30 @@ const grid = document.getElementById('grid-game');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
-const characters = [
-  "../images/beth.png",
-  'jerry',
-  'jessica',
-  'morty',
-  'pessoa-passaro',
-  'pickle-rick',
-  'rick',
-  'summer',
-  'meeseeks',
-  'scroopy',
-];
+// const characters = [
+//   {"imagem": "../images/beth.jpg"},
+//   {"imagem": "../images/jerry.jpg"},
+//   {"imagem": "../images/jessica.jpg"},
+//   {"imagem": "../images/morty.jpg"},
+//   {"imagem": "../images/pessoa-passaro.jpg"},
+//   {"imagem": "../images/pickle-rick.jpg"},
+//   {"imagem": "../images/rick.jpg"},
+//   {"imagem": "../images/summer.jpg"},
+//   {"imagem": "../images/scroopy.jpg"},
+// ];
 
+const characters = [
+  'beth.svg',
+  'jerry.png',
+  'jessica.png',
+  'morty.png',
+  'pessoa-passaro.png',
+  'pickle-rick.png',
+  'rick.png',
+  'summer.png',
+  'meeseeks.png',
+  'scroopy.png',
+];
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
   element.className = className;
@@ -84,7 +95,7 @@ const createCard = (character) => {
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
 
-  front.style.backgroundImage = `url('../images/${character}.png')`;
+  front.style.backgroundImage = `url('../images/${character}')`;
 
   card.appendChild(front);
   card.appendChild(back);
