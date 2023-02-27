@@ -49,10 +49,19 @@ img{
   aspect-ratio: 9/10;
   width: 100%;
   border-radius: 5px;
-  position: relative;
+  position: relative;  
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
   transition: all 700ms ease;
+  margin: .2rem auto; 
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  margin: .2rem auto;
+ 
 }
 
 .face {
@@ -63,11 +72,19 @@ img{
   background-position: center;
   border: 1px solid #b3d929;
   border-radius: 10px;
+  -webkit-transition: all 700ms ease;
+  -moz-transition:all 700ms ease ;
+  -ms-transition:all 700ms ease ;
+  -o-transition:all 700ms ease ;
   transition: all 700ms ease;
 }
 
 .front {
- transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .back {
@@ -77,6 +94,10 @@ img{
 
 .reveal-card {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
 }
 
 .disabled-card {
@@ -102,3 +123,17 @@ img{
 
   }
  }
+/* 
+ @media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : landscape) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ }
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{ } */

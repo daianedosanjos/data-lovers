@@ -6,7 +6,7 @@ align-items: center;
 margin-top: 0.4rem;
 }
 
-.input-search,
+::-webkit-input,
   select {
 	border-radius: 5px;
   }
