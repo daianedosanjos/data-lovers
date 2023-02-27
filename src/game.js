@@ -1,6 +1,9 @@
 const grid = document.getElementById('grid-game');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const mensage = document.querySelector('.mensage');
+const divMensage = document.querySelector('.div-mensage');
+
 
 const characters = [
   'beth.png',
@@ -28,7 +31,15 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop);
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+    // alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+    const button = createElement('button', 'return');
+    button.innerHTML = "JOGUE NOVAMENTE"
+    divMensage.appendChild(button);
+    button.addEventListener("click",(e) =>{
+      location.reload(e);
+    })
+    return (mensage.innerHTML = `Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML} segundos`);
+   
   }
 }
 
