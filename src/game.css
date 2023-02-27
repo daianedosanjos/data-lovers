@@ -41,6 +41,18 @@ img{
   
 }
 
+.mensage{
+  font-size: 1.5rem;
+  color: white;
+}
+
+.return{
+  background-color: #3adfad;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: -1rem;
+}
+
 .card {
   display: flex;
   flex-wrap: wrap;
@@ -77,6 +89,7 @@ img{
   -ms-transition:all 700ms ease ;
   -o-transition:all 700ms ease ;
   transition: all 700ms ease;
+  
 }
 
 .front {
@@ -85,11 +98,13 @@ img{
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  
 }
 
 .back {
   background-image: url("./images/rick\ e\ morty6.jpg");
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .reveal-card {
@@ -122,18 +137,8 @@ img{
     position: absolute;
 
   }
- }
-/* 
- @media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
-    and (orientation : landscape) 
-    and (-webkit-min-device-pixel-ratio : 2)
-{ }
 
-@media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
-    and (orientation : portrait) 
-    and (-webkit-min-device-pixel-ratio : 2)
-{ } */
+  .mensage{
+    font-size: 1.1rem;    
+  }
+ }
