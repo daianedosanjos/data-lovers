@@ -68,12 +68,11 @@ body{
 	opacity: 60%;
 	bottom: 0;
 	left: 0;
-	/* height: 5rem; deixa o footer muito largo */
+	 height: auto; /* 5rem deixa o footer muito largo */
 	justify-content: center;
 	align-items: center;
 	margin: .5rem auto auto auto; /*.5rem quebra entre os cards e o footer*/
 	background-color: rgb(255, 255, 255);
-
 
 }
 .footer h4{
