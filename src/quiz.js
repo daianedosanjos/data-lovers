@@ -1,6 +1,5 @@
 import  { calculatePercentage } from "./data.js";
 
-
 const formQuiz = document.querySelector("#quiz");
 
 formQuiz.addEventListener("click", (e)=>{
