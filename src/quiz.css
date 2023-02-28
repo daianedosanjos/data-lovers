@@ -41,11 +41,11 @@ h2{
 	background-color: rgba(128, 0, 128, 0.493);
 }
 
-.correta{
+[data-score="true"]{
 	background-color: rgba(0, 228, 0, 0.459)
 }
 
-.errada{
+[data-score="false"]{
 	background-color: rgba(255, 0, 0, 0.459)
 }
 

@@ -1,71 +1,23 @@
-/* eslint-disable no-console */
-//input.value === "correta"
-//style.backgroundColor = "rgba(0, 228, 0, 0.459)"
-//else backgroundColor = "rgba(255, 0, 0, 0.459)"
+import  { calculatePercentage } from "./data.js";
+
 
 const formQuiz = document.querySelector("#quiz");
-console.log(typeof formQuiz);
 
-const questions = document.querySelectorAll(".quizQuestion");
-console.log(typeof questions);
+formQuiz.addEventListener("click", (e)=>{
+  const elemento = e.target;
+  const ehRadio = elemento.type === "radio";
+  const ehCorreta = ehRadio && elemento.value === "correta";
 
-const perguntas = Array.from(questions); //no documento informava que podias usar num obj
-console.log(typeof perguntas);
+  if(ehRadio){
+    elemento.parentNode.parentNode.dataset.score = ehCorreta;
+    //fazer selecionar apenas uma vez
+  }
+})
 
-// OQ JÁ TENTEI FAZER:
-// COLOQUEI NUMA CONSTANTE PARA TRANSFORMAR EM ARRAY USANDO O Array.from(respCerta)
-// const respCerta = document.querySelector(".quizRespostas");
-// JÁ USEI TBM O QUERYSELECTORALL: const respCerta = document.querySelectorAll(".quizRespostas"); e o getElementsByClassName
-// E NÃO FOI DIZ QUE respostaCorreta.addEventListener is not a function
-// CRIEI UM ARRAY MANUALMENTE EM perguntasArray
 
-const perguntasArray = [
-  questions[0], questions[1], questions[2], questions[3],
-  questions[4], questions[5], questions[6], questions[7],
-  questions[8], questions[9], questions[10], questions[11],
-  questions[12], questions[13], questions[14]
-];
-console.log(perguntasArray);
-console.log(typeof perguntasArray);
-
-const respostaCorreta = document.querySelector(".quizRespostas");
-console.log(typeof respostaCorreta);
-
-// const respostaCorreta = document.querySelectorAll("input[type=radio][value=correta]"); //o typeof é string
-// const respostaErrada = document.querySelectorAll("input[type=radio][value='']");
-// desse jeito ^ FICA VERDE se tiver só .quizRespostas FICA VERMELHO e só na primeira opção pq qndo coloco querySelectorAll não funciona
-
-const acertou = respostaCorreta.value;
-// const errada = respostaErrada;
-console.log(typeof acertou);
-
-const divCor = document.querySelector(".divQuiz");
-console.log(typeof divCor);
-
-// o addEventListener funciona com questions, perguntas e perguntasArray , mas em todos só pega o primeiro input ; o evento tbm funcionava com change
-
-respostaCorreta.addEventListener("click", () => {
-  perguntas.forEach(() => {
-    if (acertou === "correta") {
-      divCor.style.backgroundColor = "rgba(0, 228, 0, 0.459)";
-    } 
-    divCor.style.backgroundColor = "rgba(255, 0, 0, 0.459)";
+// export const calculatePercentage = (dataList, dataListFiltered)=> {    
+//   return parseInt((dataListFiltered*100)/dataList)
+// }
     
-  });
-});
-
-// perguntasArray.forEach( () => {
-//   respostaCorreta.addEventListener("change", ()=>{
-
-//     if(acertou === "correta"){
-
-//       // perguntas.classList.add("correta"); // não é possuivel ler as propriedades de add
-
-//       divCor.style.backgroundColor = "rgba(0, 228, 0, 0.459)"
-//     } else {//if (acertou === "") ASSIM TBM FUNCIONA
-//       // perguntas.classList.add("errada");
-
-//       divCor.style.backgroundColor = "rgba(255, 0, 0, 0.459)"
-//     }
-//   })
-// })
+// const percentage = calculatePercentage(characters.length, filteredSearch.length);
+//   percentageReturn.innerHTML = `Essa lista contém ${filteredSearch.length} personagens, que equivale á ${percentage}% dos personagens totais`; 
