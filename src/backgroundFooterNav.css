@@ -1,13 +1,13 @@
 body{
 	background-image: url(./images/background.jpg);
 	font-family: 'IBM Plex Mono', monospace;
-	background-size: 100%; 
+	/* background-size: 100%; não precisa, a imagem se adequa e depois repeat */
 }
 
 .img-header{
 	display: flex;
 	justify-content: center;
-	
+	margin: 2.5rem;
 }
 
 .filters{
@@ -17,7 +17,6 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;	/* tem que ter para não expandir os inputs  */
-	/* padding: 2rem 0rem 0rem 0rem; */
 	gap: 10px;
 }
 
@@ -42,7 +41,6 @@ body{
 	color: #551A8B;
 
 }
-
 .listNav{
   margin: 1rem 2rem;
 	padding: 0rem;
@@ -55,13 +53,10 @@ body{
 
 .jogos a.invisible{
 	display: none;
-
 }
 .jogos:hover a.invisible, a.invisible{
 	display: block;
 	font-size: medium;
-	
-
 }
 
 .footer{
@@ -73,14 +68,16 @@ body{
 	opacity: 60%;
 	bottom: 0;
 	left: 0;
-	height: 5rem;
+	 height: auto; /* 5rem deixa o footer muito largo */
 	justify-content: center;
 	align-items: center;
-	margin: auto;
+	margin: .5rem auto auto auto; /*.5rem quebra entre os cards e o footer*/
+	background-color: rgb(255, 255, 255);
 
 }
 .footer h4{
 	opacity: 100%;
+	margin: 1rem;
 }
 .footer a{
 	color: #551A8B;
@@ -89,6 +86,9 @@ body{
 }
 
 @media(max-width: 590px){
+	.img-header{
+		margin: 1.2rem;
+	}
 	.logo{
 		margin: -10px;
 	}
@@ -174,7 +174,6 @@ body{
 		transition-duration: 0.35s;
 		line-height: 5rem;
 		font-size: 1.5rem;
-
 		margin-left: 0;
 				
 	}
