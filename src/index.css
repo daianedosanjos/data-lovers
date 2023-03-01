@@ -3,6 +3,10 @@ body{
 	margin: 0px;
 }
 
+.logo{
+	margin-top: 1rem;
+  }
+
 .textApresentation{
 	color: rgb(0, 0, 0);
 	line-height: 30px;

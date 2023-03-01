@@ -1,20 +1,23 @@
 const grid = document.getElementById('grid-game');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const mensage = document.querySelector('.mensage');
+const divMensage = document.querySelector('.div-mensage');
+const tempo = document.querySelector(".tempo")
+
 
 const characters = [
-  'beth',
-  'jerry',
-  'jessica',
-  'morty',
-  'pessoa-passaro',
-  'pickle-rick',
-  'rick',
-  'summer',
-  'meeseeks',
-  'scroopy',
+  'beth.png',
+  'jerry.png',
+  'jessica.png',
+  'morty.png',
+  'pessoa-passaro.png',
+  'pickle-rick.png',
+  'rick.png',
+  'summer.png',
+  'meeseeks.png',
+  'scroopy.png',
 ];
-
 const createElement = (tag, className) => {
   const element = document.createElement(tag);
   element.className = className;
@@ -29,7 +32,16 @@ const checkEndGame = () => {
 
   if (disabledCards.length === 20) {
     clearInterval(this.loop);
-    alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi de: ${timer.innerHTML}`);
+    timer.style.opacity = 0;
+    tempo.style.opacity = 0 ;
+    const button = createElement('button', 'button');
+    button.innerHTML = "JOGUE NOVAMENTE"
+    divMensage.appendChild(button);
+    button.addEventListener("click",(e) =>{
+      location.reload(e);
+    })
+    return (mensage.innerHTML = `Parabéns,${spanPlayer.innerHTML} seu tempo foi de ${timer.innerHTML} segundos`);
+   
   }
 }
 
@@ -41,6 +53,8 @@ const checkCards = () => {
 
     firstCard.firstChild.classList.add('disabled-card');
     secondCard.firstChild.classList.add('disabled-card');
+    const audio = new Audio("audio/click.mp3");
+    audio.play();
 
     firstCard = '';
     secondCard = '';
@@ -76,12 +90,11 @@ const revealCard = ({ target }) => {
 }
 
 const createCard = (character) => {
-
   const card = createElement('div', 'card');
   const front = createElement('div', 'face front');
   const back = createElement('div', 'face back');
 
-  front.style.backgroundImage = `url('../images/${character}.png')`;
+  front.style.backgroundImage = `url('images/${character}')`;
 
   card.appendChild(front);
   card.appendChild(back);
