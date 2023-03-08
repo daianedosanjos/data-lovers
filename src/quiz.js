@@ -42,7 +42,7 @@ enviaQuiz.addEventListener("click", function calculaAcertos (){
   } 
   
   if(percentage < 20){
-    mensage.innerHTML = `Você acertou ${percentage}% das perguntas. Parece que alguém precisa assistir mais epsódios...`
+    mensage.innerHTML = `Você acertou ${percentage}% das perguntas. Parece que alguém precisa assistir mais episódios...`
     jogarNovamente.style.display = "block";
     enviaQuiz.remove()
   }
