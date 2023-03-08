@@ -53,6 +53,41 @@ h2{
  margin-left: 2rem;
 }
 
+.desabilita{
+	cursor: not-allowed;
+}
+.desabilita .quizRespostas{
+	pointer-events: none;	
+
+}
+
+.btn, .jogarNovamente {
+  background-color: #3adfad;
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  border: none;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+	width: 14%;
+}
+
+.mensage{
+	color: white;
+	text-align: center;
+  font-size: 1.2rem;
+
+}
+
+.jogarNovamente{
+	display: none;
+}
+
 @media screen and (max-width: 489px) {
 	.mainQuiz{
 		display: flex;
@@ -69,5 +104,14 @@ h2{
 		width: 90%;
 		justify-content: center;
 		margin: auto;
+	}
+	
+	.btn, .jogarNovamente {
+		width: 50%;
+	}
+}
+@media screen and (min-width: 490px) and (max-width: 600px) {
+	.btn, .jogarNovamente {
+		width: 20%;
 	}
 }
