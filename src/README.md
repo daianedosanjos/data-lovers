@@ -30,6 +30,6 @@ quanto para quem já conhece e deseja obter informações sobre seus personagens
 - Git e GitHub 
 - Figma
 
-##### 🛰️🎯💼 [Clique para acessar este projeto](https://geice-sousa.github.io/Data-lovers/)
+##### 🛰️🎯💼 [Clique para acessar este projeto](https://github.com/daianedosanjos/data-lovers/)
 
-##### 👩🏾‍💼🎯💼 [Clique para acessar todos o meus repositórios](https://github.com/Geice-Sousa?tab=repositories)
+##### 👩🏾‍💼🎯💼 [Clique para acessar todos o meus repositórios](https://github.com/daianedosanjos?tab=repositories)
